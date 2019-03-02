@@ -1,34 +1,29 @@
-import Vue from 'vue'
-import Router from 'vue-router'
-import HelloWorld from '@/components/HelloWorld'
-import menu from '@/components/menu/menu'
-import A_page from '@/components/page/A_page'
-import B_page from '@/components/page/B_page'
-import C_page from '@/components/page/C_page'
-import D_page from '@/components/page/D_page'
-Vue.use(Router)
+/**
+ * @Author: wys
+ * @Date: 2018-12-05 17:48:47
+ * -----
+ * @Modified By: wys
+ * @Last Modified: 2019-03-01 10:59:35
+ * HISTORY:
+ * Date  	By	Comments
+ * ------	---	---------------------------------------------------------
+ */
 
-export default new Router({
-	routes: [{
-		path: '/',
-		name: 'HelloWorld',
-		component: HelloWorld
-	}, {
-		path: '/menu',
-		name: 'menu',
-		component: menu,
-		children: [{
-			path: 'A_page',
-			component: A_page,
-		}, {
-			path: 'B_page',
-			component: B_page,
-		}, {
-			path: 'C_page',
-			component: C_page,
-		}, {
-			path: 'D_page',
-			component: D_page,
-		}]
-	}]
-})
+import React, { Component } from 'react';
+import { HashRouter as Router, Route , Switch , Redirect } from 'react-router-dom';
+
+import Login from '../containers/login';
+
+export default class RootRouter extends Component {
+
+    render() {
+        return (
+            <Router>
+                <Switch>
+                    <Route path="/login" component={Login} />
+                    <Redirect from="/" to='/login' />
+                </Switch>
+            </Router>
+        );
+    }
+}
