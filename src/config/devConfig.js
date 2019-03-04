@@ -3,11 +3,11 @@
  * @Author: fusy
  * @Date: 2018-08-28 23:28:49
  * -----
- * @Modified By: fusy
- * @Last Modified: 2018-11-19 20:34:28
+ * @Modified By: wys
+ * @Last Modified: 2019-03-01 17:26:46
  * HISTORY:
  * Date  	By	Comments
  * ------	---	---------------------------------------------------------
  */
-export const baseUrl = 'http://dev.com/';
+export const baseUrl = 'http://127.0.0.1:3030';
 export const requestKeyUrl = 'http://dev.com/';

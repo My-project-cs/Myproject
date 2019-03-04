@@ -3,7 +3,7 @@
  * @Date: 2018-12-05 18:06:26
  * -----
  * @Modified By: wys
- * @Last Modified: 2019-03-01 15:35:01
+ * @Last Modified: 2019-03-04 12:01:59
  * HISTORY:
  * Date  	By	Comments
  * ------	---	---------------------------------------------------------
@@ -60,7 +60,11 @@ export default class Login extends Component {
                 pathname:'/'
             });
         } else {
-            login();
+            login({
+                username: 'nick',
+                password: '0001',
+                // passwordRe: '0001'
+            });
         } 
     }
 
